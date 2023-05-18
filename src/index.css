@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color-primary: #FDD935;
+  --color-acent: #E1E2E2;
+  --color-blak: #000;
+  --color-blak2: #222;
+
+  /* Size */
+  --size-header: 8rem;
+  --fize-font-header: 2.6rem;
+  --size-font-body: 1.8rem;
+  /* Font */
+  --font-body: 'Fredericka the Great', cursive;
+
+  --shadow-card: 10px 10px 26px -3px rgba(0, 0, 0, 0.57);
+}
+
+body {
+  background: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--size-font-body);
+}
+
+.home__list {
+  list-style: none;
+  margin-bottom: 2rem;
+}

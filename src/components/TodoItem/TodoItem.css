@@ -1,0 +1,18 @@
+.home__list_item {
+    border: 3px solid var(--color-blak);
+    border-bottom: none;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home__list_item:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.home__list > .home__list_item:last-child {
+    border-bottom: 3px solid var(--color-blak);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

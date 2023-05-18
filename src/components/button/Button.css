@@ -1,0 +1,33 @@
+/* Btn */
+.btn {
+    border-radius: 4px;
+    border: 0;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+}
+
+
+.btn--submit {
+    background: var(--color-blak);
+    color: var(--color-acent);
+    font-family: var(--font-body);
+    font-size: var(--size-font-body);
+    transition: 0.3s;
+}
+
+.btn--submit:hover {
+    background: var(--color-blak2);
+}
+
+.btn--submit:focus {
+    box-shadow: 0px 0px 0px 2px var(--color-blak2);
+}
+
+
+.btn--delete{
+    background: tomato;
+    transition: 0.3s;
+}
+.btn--delete:hover{
+    background: #f1755f;
+}
