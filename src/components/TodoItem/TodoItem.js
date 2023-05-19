@@ -1,10 +1,10 @@
 import './TodoItem.css';
 import Button from "../button/Button";
 
-function TodoItem({name}) {
+function TodoItem(props) {
     return (
         <li className="home__list_item">
-            <span>{name}</span>
+            <span>{props.children}</span>
             <Button btnType='delete'>X</Button>
         </li>
     );
