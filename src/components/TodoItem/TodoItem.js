@@ -5,7 +5,7 @@ function TodoItem({name}) {
     return (
         <li className="home__list_item">
             <span>{name}</span>
-            <Button btnType='delete' content='X'></Button>
+            <Button btnType='delete'>X</Button>
         </li>
     );
 }

@@ -1,16 +1,16 @@
 import "./Button.css";
 
-function Button({content, btnType}) {
+function Button(props) {
 
     let className = "";
-    if (btnType === 'submit') {
+    if (props.btnType === 'submit') {
         className = 'btn btn--submit';
     } else {
         className = 'btn btn--delete';
     }
 
     return (
-        <button className={className}>{content}</button>
+        <button className={className}>{props.children}</button>
     );
 }
 

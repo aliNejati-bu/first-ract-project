@@ -1,11 +1,14 @@
 import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
+import Container from "./components/Container/Container";
 
 function App() {
     return (
         <div>
             <Header/>
-            <TodoList/>
+            <Container>
+                <TodoList/>
+            </Container>
         </div>
 
     );
