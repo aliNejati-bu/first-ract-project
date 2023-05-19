@@ -9,8 +9,9 @@ function Button(props) {
         className = 'btn btn--delete';
     }
 
+
     return (
-        <button className={className}>{props.children}</button>
+        <button className={className} onClick={props.onClick}>{props.children}</button>
     );
 }
 
