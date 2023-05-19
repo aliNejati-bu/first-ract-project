@@ -1,0 +1,20 @@
+
+.header {
+    background: var(--color-blak);
+    width: 100%;
+    height: var(--size-header);
+    color: white;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header__title {
+    font-size: var(--fize-font-header);
+    font-weight: 800;
+}
