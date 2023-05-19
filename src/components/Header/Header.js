@@ -1,14 +1,15 @@
 import './Header.css';
+import Container from "../Container/Container";
 
 function Header() {
     return (
         <header className='header'>
-            <div className="container">
+            <Container>
                 <h1 className="header__title">
                     Sample List
                 </h1>
                 <input type="text" className="input" placeholder="keyword" id="search-input"/>
-            </div>
+            </Container>
         </header>
     );
 }

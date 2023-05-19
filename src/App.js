@@ -1,17 +1,11 @@
-import TodoItem from "./components/TodoItem/TodoItem";
 import Header from "./components/Header/Header";
+import TodoList from "./components/TodoList/TodoList";
 
 function App() {
     return (
         <div>
             <Header/>
-            <ul className="home__list">
-                <TodoItem name="reza"></TodoItem>
-                <TodoItem name="gyut"></TodoItem>
-                <TodoItem name="rgyuugeza"></TodoItem>
-                <TodoItem name="rgyugeza"></TodoItem>
-            </ul>
-
+            <TodoList/>
         </div>
 
     );
