@@ -1,19 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 
 import './TodoItem.css';
 import Button from "../button/Button";
 
 function TodoItem(props) {
-    let t = props.children;
-    const [a, setA] = useState(t);
 
     const deleteHandler = () => {
-        setA('------------------------------------------');
-    }
+        props.onDeleteItem(props.children.id);
+    };
+
     return (
         <li className="home__list_item">
-            <span>{a}</span>
-            <Button btnType='delete' onClick={deleteHandler}>X</Button>
+            <span>{props.children.name}</span>
+            <Button onClick={deleteHandler} btnType='delete'>X</Button>
         </li>
     );
 }

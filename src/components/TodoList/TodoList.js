@@ -1,25 +1,14 @@
 import TodoItem from "../TodoItem/TodoItem";
-import react from 'react';
 
-function TodoList() {
-    return react.createElement(
-        'ul',
-        {
-            className:'home__list'
-        },
-        react.createElement(TodoItem,{},'Reza'),
-        react.createElement(TodoItem,{},'Mohammad'),
-        react.createElement(TodoItem,{},'Sadegh'),
-        react.createElement(TodoItem,{},'Ali'),
-    );
-    /*return (
-        <ul className="home__list">
-            <TodoItem>Reza</TodoItem>
-            <TodoItem>Mohammad</TodoItem>
-            <TodoItem>Sadegh</TodoItem>
-            <TodoItem>Ali</TodoItem>
+function TodoList(props) {
+    const deleteHandler = (id) => {
+        props.onDeleteItem(id);
+    };
+    return (
+        <ul className="home__list" >
+            {props.items.map((todo) => <TodoItem onDeleteItem={deleteHandler}>{todo}</TodoItem>)}
         </ul>
-    );*/
+    );
 }
 
 export default TodoList;
