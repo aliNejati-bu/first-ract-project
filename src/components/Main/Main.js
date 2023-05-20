@@ -1,9 +1,13 @@
+import React, {useState} from "react";
+
 import TodoList from "../TodoList/TodoList";
 import "./Main.css";
 import Button from "../button/Button";
 import Container from "../Container/Container";
+import NewTodoForm from "../NewTodoForm/NewTodoForm";
 
 function Main() {
+
     return (
         <main className="home">
             <Container>
@@ -11,12 +15,8 @@ function Main() {
                     <h2 className="home__add_title">
                         Add Item
                     </h2>
-                    <form>
-                        <div className="home__form_wrapper">
-                            <input id="form-input" type="text" className="input" placeholder="Item Name Here..."/>
-                            <Button btnType="submit">Add</Button>
-                        </div>
-                    </form>
+
+                    <NewTodoForm onNewSubmit={console.log   }/>
 
                     <h2 className="home__add_title">
                         Items
