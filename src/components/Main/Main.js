@@ -16,6 +16,17 @@ function Main() {
         name: 'Ali', id: 'e4'
     }]);
 
+    const newTodoSubmitHandler = (name) => {
+        setTodoItems((prevState) => {
+            return [...prevState,
+                {
+                    name,
+                    id: Math.random().toString()
+                }
+            ];
+        });
+    };
+
     const deleteHandler = (id) => {
         setTodoItems((prevState) => {
             return prevState.filter(x => x.id !== id);
@@ -29,7 +40,7 @@ function Main() {
                     Add Item
                 </h2>
 
-                <NewTodoForm onNewSubmit={console.log}/>
+                <NewTodoForm onNewSubmit={newTodoSubmitHandler}/>
 
                 <h2 className="home__add_title">
                     Items
