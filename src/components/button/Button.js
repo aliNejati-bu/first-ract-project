@@ -1,6 +1,6 @@
 import "./Button.css";
 
-function Button(props) {
+const Button = (props) => {
 
     let className = "";
     if (props.btnType === 'submit') {

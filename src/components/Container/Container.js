@@ -1,6 +1,6 @@
 import './Container.css';
 
-function Container(props) {
+const Container = (props) => {
     return (
         <div className='container'>{props.children}</div>
     );

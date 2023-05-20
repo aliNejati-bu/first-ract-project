@@ -1,7 +1,7 @@
 import './Header.css';
 import Container from "../Container/Container";
 
-function Header() {
+const Header = () => {
     return (
         <header className='header'>
             <Container>

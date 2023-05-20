@@ -3,7 +3,7 @@ import React from "react";
 import './TodoItem.css';
 import Button from "../button/Button";
 
-function TodoItem(props) {
+const TodoItem = (props) => {
 
     const deleteHandler = () => {
         props.onDeleteItem(props.children.id);

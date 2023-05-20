@@ -5,7 +5,7 @@ import "./Main.css";
 import Container from "../Container/Container";
 import NewTodoForm from "../NewTodoForm/NewTodoForm";
 
-function Main() {
+const Main = () => {
     const [todoItems, setTodoItems] = useState([{
         name: 'Reza', id: 'e1'
     }, {
