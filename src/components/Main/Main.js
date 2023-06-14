@@ -1,38 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 
 import TodoList from "../TodoList/TodoList";
 import "./Main.css";
 import Container from "../Container/Container";
 import NewTodoForm from "../NewTodoForm/NewTodoForm";
 
-const Main = () => {
-    const [todoItems, setTodoItems] = useState([{
-        name: 'Reza', id: 'e1'
-    }, {
-        name: 'Mohammad', id: 'e2'
-    }, {
-        name: 'Sadegh', id: 'e3'
-    }, {
-        name: 'Ali', id: 'e4'
-    }]);
-
+const Main = ({onAddList: onAddItem, todoItems, onDeleteItem}) => {
     const newTodoSubmitHandler = (name) => {
-        setTodoItems((prevState) => {
-            if (name !== '')
-                return [...prevState,
-                    {
-                        name,
-                        id: Math.random().toString()
-                    }
-                ];
-            return prevState
-        });
+        onAddItem(name);
     };
 
     const deleteHandler = (id) => {
-        setTodoItems((prevState) => {
-            return prevState.filter(x => x.id !== id);
-        });
+        onDeleteItem(id);
     };
 
     return (<main className="home">
