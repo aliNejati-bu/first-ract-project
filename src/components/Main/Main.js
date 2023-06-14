@@ -18,12 +18,14 @@ const Main = () => {
 
     const newTodoSubmitHandler = (name) => {
         setTodoItems((prevState) => {
-            return [...prevState,
-                {
-                    name,
-                    id: Math.random().toString()
-                }
-            ];
+            if (name !== '')
+                return [...prevState,
+                    {
+                        name,
+                        id: Math.random().toString()
+                    }
+                ];
+            return prevState
         });
     };
 
